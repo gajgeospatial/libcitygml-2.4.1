@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="vs2019_Debug|x64">
+      <Configuration>vs2019_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2019_Release|x64">
+      <Configuration>vs2019_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2022_Debug|x64">
+      <Configuration>vs2022_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2022_Release|x64">
+      <Configuration>vs2022_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FFAEE00D-27D0-3EF6-856E-D3C73BC24D83}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>citygml</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">citygmld</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">citygmld</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">citygmld</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">citygml</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">citygml</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">citygml</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">citygml</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">citygml</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;USE_GDAL;LIBCITYGML_DYNAMIC;CITYGML_LIBRARY;LIBCITYGML_BUILD;CMAKE_INTDIR="Debug";citygml_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;USE_GDAL;LIBCITYGML_DYNAMIC;CITYGML_LIBRARY;LIBCITYGML_BUILD;CMAKE_INTDIR=\"Debug\";citygml_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src\xercesc;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src\xercesc;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;gdal_i.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\$(GDAL_DIR)\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)citygmld.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2022_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;USE_GDAL;LIBCITYGML_DYNAMIC;CITYGML_LIBRARY;LIBCITYGML_BUILD;CMAKE_INTDIR="Debug";citygml_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;USE_GDAL;LIBCITYGML_DYNAMIC;CITYGML_LIBRARY;LIBCITYGML_BUILD;CMAKE_INTDIR=\"Debug\";citygml_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src\xercesc;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src\xercesc;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>xerces-c_3D.lib;opengl32.lib;glu32.lib;gdal_i.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\$(GDAL_DIR)\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(XERCES_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)citygmld.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2019_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;USE_GDAL;LIBCITYGML_DYNAMIC;CITYGML_LIBRARY;LIBCITYGML_BUILD;CMAKE_INTDIR="Debug";citygml_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;USE_GDAL;LIBCITYGML_DYNAMIC;CITYGML_LIBRARY;LIBCITYGML_BUILD;CMAKE_INTDIR=\"Debug\";citygml_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src\xercesc;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src\xercesc;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>xerces-c_3D.lib;opengl32.lib;glu32.lib;gdal_i.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\$(GDAL_DIR)\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(XERCES_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)citygmld.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;USE_GDAL;LIBCITYGML_DYNAMIC;CITYGML_LIBRARY;LIBCITYGML_BUILD;CMAKE_INTDIR="Release";citygml_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;USE_GDAL;LIBCITYGML_DYNAMIC;CITYGML_LIBRARY;LIBCITYGML_BUILD;CMAKE_INTDIR=\"Release\";citygml_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src\xercesc;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src\xercesc;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;gdal_i.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\$(GDAL_DIR)\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)citygml.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2022_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;USE_GDAL;LIBCITYGML_DYNAMIC;CITYGML_LIBRARY;LIBCITYGML_BUILD;CMAKE_INTDIR="Release";citygml_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;USE_GDAL;LIBCITYGML_DYNAMIC;CITYGML_LIBRARY;LIBCITYGML_BUILD;CMAKE_INTDIR=\"Release\";citygml_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src\xercesc;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src\xercesc;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>xerces-c_3.lib;opengl32.lib;glu32.lib;gdal_i.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\$(GDAL_DIR)\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(XERCES_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)citygml.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2019_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;USE_GDAL;LIBCITYGML_DYNAMIC;CITYGML_LIBRARY;LIBCITYGML_BUILD;CMAKE_INTDIR="Release";citygml_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;USE_GDAL;LIBCITYGML_DYNAMIC;CITYGML_LIBRARY;LIBCITYGML_BUILD;CMAKE_INTDIR=\"Release\";citygml_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src\xercesc;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src\xercesc;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>xerces-c_3.lib;opengl32.lib;glu32.lib;gdal_i.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\$(GDAL_DIR)\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(XERCES_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)citygml.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src\xercesc;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;USE_GDAL;LIBCITYGML_DYNAMIC;CITYGML_LIBRARY;LIBCITYGML_BUILD;CMAKE_INTDIR="MinSizeRel";citygml_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;USE_GDAL;LIBCITYGML_DYNAMIC;CITYGML_LIBRARY;LIBCITYGML_BUILD;CMAKE_INTDIR=\"MinSizeRel\";citygml_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src\xercesc;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src\xercesc;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;gdal_i.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\$(GDAL_DIR)\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)citygml.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src\xercesc;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;USE_GDAL;LIBCITYGML_DYNAMIC;CITYGML_LIBRARY;LIBCITYGML_BUILD;CMAKE_INTDIR="RelWithDebInfo";citygml_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;USE_GDAL;LIBCITYGML_DYNAMIC;CITYGML_LIBRARY;LIBCITYGML_BUILD;CMAKE_INTDIR=\"RelWithDebInfo\";citygml_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src\xercesc;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\sources\include;..\..\..\$(XERCES_DIR)\src\xercesc;..\..\..\$(GDAL_DIR)\frmts;..\..\..\$(GDAL_DIR)\alg;..\..\..\$(GDAL_DIR)\gcore;..\..\..\$(GDAL_DIR)\port;..\..\..\$(GDAL_DIR)\ogr;..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;gdal_i.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\$(GDAL_DIR)\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories);</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)citygml.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\sources\src\citygml\attributesmap.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\citymodel.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\tesselator.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\object.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\featureobject.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\appearance.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\texture.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\material.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\georeferencedtexture.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\envelope.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\appearancemanager.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\cityobject.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\geometry.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\implictgeometry.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\linearring.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\polygon.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\transformmatrix.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\texturetargetdefinition.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\materialtargetdefinition.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\texturecoordinates.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\appearancetarget.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\citygmlfactory.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\polygonmanager.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\geometrymanager.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\linestring.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\address.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\rectifiedgridcoverage.cpp" />
+    <ClCompile Include="..\..\sources\src\citygml\externalreference.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\nodetypes.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\attributes.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\geocoordinatetransformer.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\citygmldocumentparser.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\parserxercesc.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\citygmlelementparser.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\elementparser.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\delayedchoiceelementparser.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\skipelementparser.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\sequenceparser.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\gmlobjectparser.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\gmlfeaturecollectionparser.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\citymodelelementparser.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\cityobjectelementparser.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\appearanceelementparser.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\externalreferenceparser.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\materialelementparser.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\textureelementparser.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\georeferencedtextureelementparser.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\geometryelementparser.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\polygonelementparser.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\rectifiedgridcoverageparser.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\linestringelementparser.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\linearringelementparser.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\implicitgeometryelementparser.cpp" />
+    <ClCompile Include="..\..\sources\src\parser\addressparser.cpp" />
+    <ClInclude Include="..\..\sources\include\citygml\citygml_api.h" />
+    <ClInclude Include="..\..\sources\include\citygml\citygml_export.h" />
+    <ClInclude Include="..\..\sources\include\citygml\attributesmap.h" />
+    <ClInclude Include="..\..\sources\include\citygml\enum_type_bitmask.h" />
+    <ClInclude Include="..\..\sources\include\citygml\citygmllogger.h" />
+    <ClInclude Include="..\..\sources\include\citygml\polygon.h" />
+    <ClInclude Include="..\..\sources\include\citygml\material.h" />
+    <ClInclude Include="..\..\sources\include\citygml\geometry.h" />
+    <ClInclude Include="..\..\sources\include\citygml\object.h" />
+    <ClInclude Include="..\..\sources\include\citygml\featureobject.h" />
+    <ClInclude Include="..\..\sources\include\citygml\georeferencedtexture.h" />
+    <ClInclude Include="..\..\sources\include\citygml\cityobject.h" />
+    <ClInclude Include="..\..\sources\include\citygml\envelope.h" />
+    <ClInclude Include="..\..\sources\include\citygml\appearance.h" />
+    <ClInclude Include="..\..\sources\include\citygml\vecs.hpp" />
+    <ClInclude Include="..\..\sources\include\citygml\citymodel.h" />
+    <ClInclude Include="..\..\sources\include\citygml\linearring.h" />
+    <ClInclude Include="..\..\sources\include\citygml\citygml.h" />
+    <ClInclude Include="..\..\sources\include\citygml\transformmatrix.h" />
+    <ClInclude Include="..\..\sources\include\citygml\implictgeometry.h" />
+    <ClInclude Include="..\..\sources\include\citygml\tesselator.h" />
+    <ClInclude Include="..\..\sources\include\citygml\texture.h" />
+    <ClInclude Include="..\..\sources\include\citygml\appearancetargetdefinition.h" />
+    <ClInclude Include="..\..\sources\include\citygml\texturetargetdefinition.h" />
+    <ClInclude Include="..\..\sources\include\citygml\materialtargetdefinition.h" />
+    <ClInclude Include="..\..\sources\include\citygml\texturecoordinates.h" />
+    <ClInclude Include="..\..\sources\include\citygml\appearancetarget.h" />
+    <ClInclude Include="..\..\sources\include\citygml\citygmlfactory.h" />
+    <ClInclude Include="..\..\sources\include\citygml\linestring.h" />
+    <ClInclude Include="..\..\sources\include\citygml\address.h" />
+    <ClInclude Include="..\..\sources\include\citygml\rectifiedgridcoverage.h" />
+    <ClInclude Include="..\..\sources\include\citygml\externalreference.h" />
+    <ClInclude Include="..\..\CMakeModules\citygml_api.h.in" />
+    <ClInclude Include="..\..\sources\include\citygml\utils.h" />
+    <ClInclude Include="..\..\sources\include\citygml\appearancemanager.h" />
+    <ClInclude Include="..\..\sources\include\citygml\polygonmanager.h" />
+    <ClInclude Include="..\..\sources\include\citygml\geometrymanager.h" />
+    <ClInclude Include="..\..\sources\include\parser\nodetypes.h" />
+    <ClInclude Include="..\..\sources\include\parser\attributes.h" />
+    <ClInclude Include="..\..\sources\include\parser\documentlocation.h" />
+    <ClInclude Include="..\..\sources\include\parser\parserutils.hpp" />
+    <ClInclude Include="..\..\sources\include\parser\geocoordinatetransformer.h" />
+    <ClInclude Include="..\..\sources\include\parser\citygmldocumentparser.h" />
+    <ClInclude Include="..\..\sources\include\parser\citygmlelementparser.h" />
+    <ClInclude Include="..\..\sources\include\parser\elementparser.h" />
+    <ClInclude Include="..\..\sources\include\parser\delayedchoiceelementparser.h" />
+    <ClInclude Include="..\..\sources\include\parser\skipelementparser.h" />
+    <ClInclude Include="..\..\sources\include\parser\sequenceparser.h" />
+    <ClInclude Include="..\..\sources\include\parser\gmlobjectparser.h" />
+    <ClInclude Include="..\..\sources\include\parser\gmlfeaturecollectionparser.h" />
+    <ClInclude Include="..\..\sources\include\parser\citymodelelementparser.h" />
+    <ClInclude Include="..\..\sources\include\parser\cityobjectelementparser.h" />
+    <ClInclude Include="..\..\sources\include\parser\appearanceelementparser.h" />
+    <ClInclude Include="..\..\sources\include\parser\externalreferenceparser.h" />
+    <ClInclude Include="..\..\sources\include\parser\materialelementparser.h" />
+    <ClInclude Include="..\..\sources\include\parser\textureelementparser.h" />
+    <ClInclude Include="..\..\sources\include\parser\georeferencedtextureelementparser.h" />
+    <ClInclude Include="..\..\sources\include\parser\geometryelementparser.h" />
+    <ClInclude Include="..\..\sources\include\parser\polygonelementparser.h" />
+    <ClInclude Include="..\..\sources\include\parser\rectifiedgridcoverageparser.h" />
+    <ClInclude Include="..\..\sources\include\parser\linestringelementparser.h" />
+    <ClInclude Include="..\..\sources\include\parser\linearringelementparser.h" />
+    <ClInclude Include="..\..\sources\include\parser\implicitgeometryelementparser.h" />
+    <ClInclude Include="..\..\sources\include\parser\addressparser.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

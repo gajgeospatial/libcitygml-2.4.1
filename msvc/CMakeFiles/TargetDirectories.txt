@@ -1,0 +1,7 @@
+N:/Development/Dev_Base/libcitygml-2.4.1/msvc/CMakeFiles/INSTALL.dir
+N:/Development/Dev_Base/libcitygml-2.4.1/msvc/CMakeFiles/ALL_BUILD.dir
+N:/Development/Dev_Base/libcitygml-2.4.1/msvc/CMakeFiles/ZERO_CHECK.dir
+N:/Development/Dev_Base/libcitygml-2.4.1/msvc/sources/CMakeFiles/citygml.dir
+N:/Development/Dev_Base/libcitygml-2.4.1/msvc/sources/CMakeFiles/INSTALL.dir
+N:/Development/Dev_Base/libcitygml-2.4.1/msvc/test/CMakeFiles/citygmltest.dir
+N:/Development/Dev_Base/libcitygml-2.4.1/msvc/test/CMakeFiles/INSTALL.dir

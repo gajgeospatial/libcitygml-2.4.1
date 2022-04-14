@@ -1,0 +1,11 @@
+prefix=C:/Program Files/libcitygml
+exec_prefix=C:/Program Files/libcitygml/bin
+libdir=C:/Program Files/libcitygml/lib
+includedir=C:/Program Files/libcitygml/include/citygml
+
+Name: citygml
+Description: Read and Write CityGML files
+Requires: xerces-c glu gdal
+Version: 2.4.1
+Libs: -LC:/Program Files/libcitygml/lib -lcitygml
+Cflags: -IC:/Program Files/libcitygml/include/citygml

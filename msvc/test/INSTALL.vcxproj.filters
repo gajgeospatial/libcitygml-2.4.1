@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="N:\Development\Dev_Base\libcitygml-2.4.1\msvc\CMakeFiles\97b36b847ad0214c4d0e355b38f2c2ca\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{356BBC2B-6FDE-3FB5-8B71-75D8C98BB2CA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
